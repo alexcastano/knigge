@@ -17,11 +17,11 @@ defmodule Knigge.Implementation do
     implementation
   end
 
-  def fetch_for!(module, env) do
+  def fetch_for!(module, _env) do
     opts = Knigge.options!(module)
 
     opts
     |> Knigge.Implementation.fetch!()
-    |> Knigge.Module.ensure_exists!(opts, env)
+    # |> Knigge.Module.ensure_exists!(opts, env)
   end
 end

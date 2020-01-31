@@ -218,7 +218,7 @@ defmodule Knigge do
         implementation =
           options
           |> Knigge.Implementation.fetch!()
-          |> Knigge.Module.ensure_exists!(options, __ENV__)
+          # |> Knigge.Module.ensure_exists!(options, __ENV__)
 
         def __knigge__(:implementation) do
           unquote(implementation)
